@@ -18,7 +18,7 @@ public class AppServMiniBankV2 {
 		Registry rmiRegistry = LocateRegistry.createRegistry(1099);
 		System.out.println("rmi Registry on server host :" + rmiRegistry.toString());
 			
-		System.out.println("demarrage du serveur RMI <<AppServMiniBank>> ...");
+		System.out.println("demarrage du serveur RMI <<AppServMiniBank>>en V2/JNDI ...");
 		System.out.println("... creation et exportation de la factory <<MiniBank>> ");
 			MiniBankImpl miniBank = new MiniBankImpl();
 			String chNom="MiniBank";

@@ -4,4 +4,5 @@ set CP="%M2_REPOSITORY%/tp/servRmi-api/0.0.1-SNAPSHOT/servRmi-api-0.0.1-SNAPSHOT
 set REMOTE_HOST=localhost
 REM set REMOTE_HOST=192.168.0.200
 java -cp %CP% tp.client.MiniBankSimpleClient %REMOTE_HOST%
+REM java -cp %CP% tp.client.MiniBankSimpleClientV2 %REMOTE_HOST%
 pause

@@ -6,5 +6,6 @@ public interface MiniBankRemoteFactory extends Remote {
 
 public Converter remoteConverter() throws RemoteException;
 public SimuEmprunt remoteSimulateurEmprunt() throws RemoteException;
+public SerieStat remoteSerieStat() throws RemoteException;
 }
 

@@ -6,10 +6,15 @@ import java.rmi.RMISecurityManager;
 */
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import tp.finance.api.Converter;
 import tp.finance.api.MiniBankRemoteFactory;
+import tp.finance.api.SerieStat;
 import tp.finance.api.SimuEmprunt;
+import tp.finance.data.Serie;
+import tp.finance.data.Stat;
 
 /* VERSION1 - RMI-over-JRMP  sans JNDI */
 
@@ -56,6 +61,13 @@ public class MiniBankSimpleClient {
 	
 	String auteur = convertisseur.getAuteur();
 	System.out.println("auteur = " + auteur);
+
+	SerieStat serieStat = (SerieStat) miniBank.remoteSerieStat();
+	System.out.println("reference obtenue vers un objet distant de type SerieStat.");
+
+	Serie serie1 = new Serie("s1" , Arrays.asList(12.0, 8.0, 4.0));
+	Stat stat1 = serieStat.buildSerieStat(serie1);
+	System.out.println("pour serie1="+serie1 + " stat=" + stat1);
 		
 	}
 	catch(Exception ex)

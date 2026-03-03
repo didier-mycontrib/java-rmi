@@ -5,6 +5,7 @@ import java.rmi.server.UnicastRemoteObject;
 
 import tp.finance.api.Converter;
 import tp.finance.api.MiniBankRemoteFactory;
+import tp.finance.api.SerieStat;
 import tp.finance.api.SimuEmprunt;
 
 
@@ -26,6 +27,11 @@ public class MiniBankImpl extends UnicastRemoteObject implements MiniBankRemoteF
 
 	public SimuEmprunt remoteSimulateurEmprunt() throws RemoteException {
 		return new SimuEmpruntImpl();
+	}
+
+	@Override
+	public SerieStat remoteSerieStat() throws RemoteException {
+		return new SerieStatImpl();
 	}
 
 }
